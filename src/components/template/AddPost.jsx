@@ -68,7 +68,6 @@ function AddPost() {
         <input type="file" name="images" id="images"/>
         <button onClick={addHandler}>ایجاد</button>
         <button onClick={outHandler}>خروج</button>
-        <button>slm</button>
     </form>
   )
 }
