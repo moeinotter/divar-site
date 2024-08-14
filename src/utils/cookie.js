@@ -15,8 +15,8 @@ const getCookie = (cookieName) => {
 };
 
 const outHandler = () => {
-    document.cookie = `accessToken=max-age=${0}`;
-    document.cookie = `refreshToken=max-age=${0}`;
+    document.cookie = `accessToken=max-age=0`;
+    document.cookie = `refreshToken=max-age=0`;
    const navigate = useNavigate();
    const { refetch } = useQuery({
     queryKey: ["profile"],

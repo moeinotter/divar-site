@@ -6,7 +6,7 @@ import styles from "./AddPost.module.css"
 import { getCookie } from "utils/cookie"
 import axios from "axios"
 import {  toast } from "react-hot-toast"
-import { outHandler } from "src/utils/cookie"
+
 
 function AddPost() {
     const [form, setForm] = useState({
@@ -67,7 +67,6 @@ function AddPost() {
         <label htmlFor="images">عکس</label>
         <input type="file" name="images" id="images"/>
         <button onClick={addHandler}>ایجاد</button>
-        <button onClick={outHandler}>خروج</button>
     </form>
   )
 }

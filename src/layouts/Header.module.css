@@ -24,36 +24,67 @@
     display: flex;
     align-items: center;
     color: gray;
-    height: 50px;
+    border-radius: 5px;
+    padding: 10px;
 }
 
+.header span:hover {
+    background-color: #eaeaea;
+    transition: all 0.1s ease-in;
+}
 
 .header span p {
     margin-right: 5px;
     font-size: 0.9rem;
 }
 
+
+.header span img {
+    width: 17px;
+}
+
 .button {
     background-color: #a62626;
     color: #fff;
     height: 40px;
-    width: 80px;
+    width: 100px;
     line-height: 40px;
     text-align: center;
     border-radius: 5px;
-    margin-right: 40px;
+    margin-right: 20px;
     cursor: pointer;
 }
+
 
 .out {
     background-color: #a62626;
     color: #fff;
-    border: none;
-    margin-right: 15px;
-    width: 80px;
     height: 40px;
-    border-radius: 5px;
-    text-align: center;
+    width: 100px;
     line-height: 40px;
+    text-align: center;
+    border-radius: 5px;
+    border: none;
+    margin-right: 20px;
     cursor: pointer;
+} 
+
+
+
+.under {
+    border: 1px solid #eaeaea;
+    border-radius: 5px;
+    position: absolute;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    margin-top: 5px;
 }
+
+.panel {
+    padding: 5px 10px 5px 80px;
+    border-bottom: 1px solid #eaeaea;
+    display: none;
+}
+
+
