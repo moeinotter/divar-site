@@ -28,7 +28,7 @@ function Header() {
                     <img src="profile.svg"  />
                     <p>دیوار من</p>
                 </span>
-            </Link>
+                </Link>
                 <div className={styles.under}>
                     {data?.data?.role === "ADMIN" ? (
                         <Link to="/admin" className={styles.panel}>پنل ادمین</Link>

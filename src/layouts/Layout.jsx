@@ -1,6 +1,5 @@
-import Header from 'layouts/Header'
-import Footer from 'layouts/Footer'
-import styles from "./Layout.module.css"
+import Header from 'layouts/Header';
+import Footer from 'layouts/Footer';
 import Router from 'src/router/Router';
 
 function Layout({chidren}) {
