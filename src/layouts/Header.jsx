@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import styles from "./Header.module.css"
 import { outHandler } from 'src/utils/cookie'
@@ -7,6 +7,7 @@ import { getProfile } from 'src/services/user'
 
 
 function Header() { 
+    const [paanel, setpanel] = useState(false)
     const { data } = useQuery({
         queryKey: ["profile"],
         queryFn: getProfile
@@ -22,21 +23,24 @@ function Header() {
                 <p>تهران</p>
             </span>
         </div>
-        <div className>
-            <Link to="/auth">
-                <span className>
+        <div>
+            <Link>
+                <span className={styles.top} onClick={() => setpanel(paanel => !paanel)}>
                     <img src="profile.svg"  />
                     <p>دیوار من</p>
                 </span>
                 </Link>
                 <div className={styles.under}>
-                    {data?.data?.role === "ADMIN" ? (
-                        <Link to="/admin" className={styles.panel}>پنل ادمین</Link>
-                    ) : null }
+                    {paanel ? ( <>
+                        {data?.data?.role === "ADMIN" ? (
+                        <Link to="/admin" className={styles.panel} onClick={() => setpanel(paanel => !paanel)}>پنل ادمین</Link>
+                         ) : null }
                         <Link className={styles.panel}>پنل ادمین</Link>
                         <Link className={styles.panel}>پنل ادمین</Link>
                         <Link className={styles.panel}>پنل ادمین</Link>
                         <Link className={styles.panel}>پنل ادمین</Link>
+                        </>
+                    ): null}
                 </div>
             <Link to="/dashboard" className={styles.button}>ثبت اگهی</Link>
             <Link to="/auth" onClick={outHandler} className={styles.out}>خروج</Link>
